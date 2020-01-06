@@ -45,3 +45,13 @@ variable "cognito_identity_pool_name" {
 variable "cognito_identity_pool_provider" {
   description = "Cognito identity pool provider"
 }
+
+# -----------------------------------------------------------------------------
+# Variables: SAML
+# -----------------------------------------------------------------------------
+
+# var.saml_provider_arns
+variable "saml_provider_arns" {
+  description = "SAML provider arn"
+  default     = []
+}

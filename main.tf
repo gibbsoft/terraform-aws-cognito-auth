@@ -54,6 +54,7 @@ module "identity" {
 
   cognito_identity_pool_name     = "${var.cognito_identity_pool_name}"
   cognito_identity_pool_provider = "${var.cognito_identity_pool_provider}"
+  saml_provider_arns             = "${var.saml_provider_arns}"
 }
 
 # module.message
@@ -74,6 +75,8 @@ module "message" {
   ses_sender_address = "${var.ses_sender_address}"
 }
 
+### FIXME:  You might need to comment out this section (module.route) for your first run,
+### tested with terraform v0.12.18.
 # module.route
 module "route" {
   source = "./modules/route"

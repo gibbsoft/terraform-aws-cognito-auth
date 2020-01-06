@@ -103,3 +103,13 @@ variable "bucket" {
   description = "S3 bucket name"
   default     = ""
 }
+
+# -----------------------------------------------------------------------------
+# Variables: SAML
+# -----------------------------------------------------------------------------
+
+# var.saml_provider_arns
+variable "saml_provider_arns" {
+  description = "SAML provider arn"
+  default     = []
+}
